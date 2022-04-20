@@ -1,5 +1,5 @@
 import {server} from './server';
-require('dotenv').config();
+import 'dotenv/config';
 
 // parse the port from .env file
 const port = process.env.PORT || 3000;

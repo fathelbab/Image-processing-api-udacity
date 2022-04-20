@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "lint": "eslint . --ext .ts",
-    "build": "npx tsc && node ./build/index.js",
-    "clean": "tsc --build --clean"
+    "build": "npx tsc",
+    "clean": "tsc --build --clean",
+    "start": "node ./build/index.js",
+    "excute": "npx tsc && node ./build/index.js"
   },
   "author": "",
   "license": "ISC",
