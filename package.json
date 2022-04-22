@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "jasmine": "jasmine",
     "test": "npm run build && npm run jasmine",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "lint": "eslint . --ext .ts",
@@ -23,8 +24,10 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/jasmine": "^4.0.3",
     "@types/morgan": "^1.9.3",
     "@types/node": "^17.0.24",
+    "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "eslint": "^8.13.0",
@@ -32,6 +35,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jasmine": "^4.1.0",
     "prettier": "^2.6.2",
+    "supertest": "^6.2.2",
     "typescript": "^4.6.3"
   }
 }
