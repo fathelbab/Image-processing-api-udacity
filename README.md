@@ -42,4 +42,5 @@ npm run lint
 
 #EndPoint
 
-  **GET /api/images?filename=name&width=200&height=200**
+  **GET**
+  **/api/images?filename=a&width=200&height=200**
