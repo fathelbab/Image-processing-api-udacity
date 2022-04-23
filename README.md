@@ -40,3 +40,6 @@ npm run lint
 
 ```
 
+#EndPoint
+
+  **GET /api/images?filename=name&width=200&height=200**
