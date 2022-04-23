@@ -10,7 +10,6 @@ export  const resize = async  (
 ): Promise<string> => {
   const outputFolderPath = path.join( __dirname,'..','..','thumb', `${imgName}${width}x${height}.jpg`);
   const imageFolderPath = path.join( __dirname,'..','..','full',`${imgName}.jpg`);
-  console.log('=====>',outputFolderPath)
 
   try {
       const outPutPath = path.join( __dirname,'..','..','thumb')

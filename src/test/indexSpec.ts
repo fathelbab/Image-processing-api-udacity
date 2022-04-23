@@ -1,5 +1,5 @@
 
-import {resizeImage} from '../routes/api/getImage';
+import {resize} from '../module/resize';
 import supertest from 'supertest';
 
 import {app} from '../app';
@@ -9,10 +9,10 @@ const req = supertest(app);
 // Testing image processing 
 describe('Test Resizing the image', (): void => {
     it('expects the file to be resized', async (): Promise<void> => {
-      await expectAsync(resizeImage( 300, 200,'a',)).toBeResolved();
+      await expectAsync(resize( 300, 200,'a',)).toBeResolved();
     });
     it('expects to throw an error if the file doesnt exist', async (): Promise<void> => {
-      await expectAsync(resizeImage( 400, 400,'non-exist-file')).toBeRejected();
+      await expectAsync(resize( 400, 400,'non-exist-file')).toBeRejected();
     });
   });
 

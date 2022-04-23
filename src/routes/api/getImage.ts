@@ -3,22 +3,7 @@ import {Request, Response} from 'express';
 import {resize} from '../../module/resize'
 const image = express.Router();
 
-// export const resizeImage = async  (
-//     width: number,
-//     height: number,
-//   imgName: string,
-// ): Promise<string> => {
-//   const outputFolderPath = path.join( __dirname,'..','..','..','thumb', `${imgName}${width}x${height}.jpg`);
-//   const imageFolderPath = path.join( __dirname,'..','..','..','full',`${imgName}.jpg`);
-//   console.log('=====>',outputFolderPath)
 
-//   try {
-//     await fsPromise.access(outputFolderPath);
-//   } catch (error) {
-//     await sharp(imageFolderPath).resize(width, height).toFile(outputFolderPath);
-//   }
-//   return outputFolderPath;
-// }
 image.get('/', async (req: Request, res: Response): Promise<void> => {
     const width = parseInt(req.query.width as string);
     const height = parseInt(req.query.height as string);
@@ -46,10 +31,8 @@ image.get('/', async (req: Request, res: Response): Promise<void> => {
     // start resizing
     try {
       const outputThumb = await resize(width, height, filename);
-      console.log('finding image')
       res.sendFile(outputThumb);
     } catch (error) {
-      console.log(error)
       res.status(404).send('required image not found');
     }
   });
